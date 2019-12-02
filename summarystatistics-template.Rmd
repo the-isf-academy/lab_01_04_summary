@@ -321,8 +321,7 @@ times_list = sorted(times_list)
 * What is the average number of hours survey respondents use social media per day? 
 * What is the most common response for the number of hours survey respondents use social media?
 * Create a box-and-whisker plot (x-axis: number of hours, y-axis: number of survey respondents).
-* Which group took our survey more: the 6-9th graders or the 10 - 12th graders? (hint: use a histogram)
-
+* Do more survey respondents spend less than 3 hours, 3 - 5 hours, or 5+ hours? 
 
 ## C. Ask your own question: ______________
 
