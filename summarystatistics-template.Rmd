@@ -1,0 +1,347 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.1'
+      jupytext_version: 1.2.4
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+---
+
+# Lab 01.04 Summary Statistics
+
+
+# 1. Set Up Your Data
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
+### Side note: 
+<img src="http://www.pngnames.com/files/4/Panda-PNG-Transparent-Background.png" width="150" height="100" />
+
+**What is pandas, and why are we importing it?**
+
+It's a python library that helps us organize and access our data set into an object called a dataframe, or df for short. 
+
+<img src="https://matplotlib.org/3.1.1/_images/sphx_glr_sample_plots_thumb.png">
+
+**What is matplotlib, and why are we importing it?**
+It's a python library that helps us plot graphs. 
+
+<img src="https://revisionworld.com/sites/revisionworld.com/files/imce/sdeviation2.gif">
+
+**What is numpy, and why are we importing it?**
+It's a python library that helps us do mathematical calculations. 
+
+
+Here's are two small lists that you can run as tests when you develop your code.
+
+💻 **For the odd data set, put in 7 elements. Each number is the amount of sleep per night you got in the past week.**
+
+```{python}
+odd_data = []
+even_data = [100,200,300,400,500]
+```
+
+```{python}
+odd_data = sorted(odd_data)
+even_data = sorted(even_data)
+```
+
+# 2. Calculate The Central Tendency, aka Middle
+
+
+👀  **The median, mean, and mode are calculations we can use to identify the middles. They'll give us slightly different answers, depending on the data set.**
+
+
+<img src = "https://www.payscale.com/data/wp-content/uploads/sites/8/2018/06/mode-median-mean.gif">
+
+
+ ## A. The median. 
+
+
+💻 Write the median function and any helper functions you'll need (hint: you've done it already!) 
+
+```{python}
+def calculate_median(sorted_list):
+    """
+    Takes the sorted list, returns the median of the list
+    input: list of ints(or floats)
+    output: integer (or float)
+    """
+    pass
+```
+
+✅✅ Test: Use your function to calculate the median of the small data list. Is it the same as your hand calculations?
+
+```{python}
+calculate_median(odd_data)
+```
+
+```{python}
+calculate_median(even_data)
+```
+
+## B. The mean.
+
+
+💻 Write the mean function and any helper functions you'll need (hint: you've done it already!) 
+
+```{python}
+def calculate_mean(list_of_numbers):
+    """
+    Returns the average (mean) of a list of numbers.
+    input: list of ints (or floats)
+    output: float
+    """
+    pass
+```
+
+✅✅ Test: Use your function to calculate the mean of the small data list. Is it the same as your hand calculations?
+
+```{python}
+calculate_mean(odd_data)
+```
+
+```{python}
+calculate_mean(even_data)
+```
+
+## C. The mode.
+
+
+💻 Write the mode function and the helper function, create_counts_dict
+
+
+<img src = "https://mediadc.brightspotcdn.com/dims4/default/a12d362/2147483647/strip/true/crop/2400x1264+0+0/resize/2400x1264!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F14%2F0d%2F29f5ea424f6fa447310a14d6362c%2F03-skinner-openbooks.jpg" style="width:500px">
+
+### Dictionary alert: You may want to use a dictionary to solve this problem. 
+#### We haven't taught you everything you need to know about dictionaries yet. It'll be up to you to figure some new features of dictionaries. Please use the internet, your peers, and your teachers as resources!
+
+```{python}
+def create_counts_dict(list_of_numbers):
+    """
+    Returns a dictionary that contains each item of the list (as a key) and how often they appear (as the value)
+    """
+    pass
+
+def calculate_mode(list_of_numbers):
+    """
+    Returns the number that occurred most often in the list of numbers. 
+    If there is more than one mode (or no mode), the first one to appear in the list is returned.
+    input: list of ints (or floats)
+    output: float
+    """
+    pass
+```
+
+✅✅ Test: Use your function to calculate the mode of the small data list. Is it the same as your hand calculations?
+
+```{python}
+calculate_mode(odd_data)
+```
+
+```{python}
+calculate_mode(even_data)
+```
+
+# 3. Now let's calculate Spread
+
+
+<img src = "https://soupsahoy.files.wordpress.com/2015/01/hk-french-toast_2.jpg">
+
+
+👀 **Spread. You can have it with toast and statistics. It turns out that the central tendency of the dataset doesn't tell us the whole story.**
+
+**For example, consider the red dataset and the blue dataset. They have the same middle (both mean and median = 7), but one has much higher spread than the other.** 
+
+**Which dataset if your sleep schedule more like? What kind of spread do you have?**
+
+
+<img src="https://i.imgur.com/hw9yRAK.png" style="width:500px">
+
+
+(Optional) Explore mean and median [here](https://teacher.desmos.com/activitybuilder/custom/5733262bfd802215069a40c0#preview/c150c31c-cac4-4b2b-8753-d0aea1ce3aa1)
+
+
+## A. Interquartile range. 
+
+
+👀 **This number will tells us how far the upper and lower quartile are from the median. It is equal to the upper quartile minus the lower quartile.**
+
+
+<img src = "https://www.simplypsychology.org/IQR.jpg">
+
+
+💻 Write a function that calculates the interquartile range and any helper functions you'll need (hint: you'll need calculate_Q1 and calculate_Q3 from the previous lab!)
+
+```{python}
+def calculate_IQR(sorted_list):
+    """
+    Takes the sorted list, calculates Q1 and Q3, and returns the difference between Q3 and Q1, which is the interquartile range. 
+    input: list of ints(or floats)
+    output: integer (or float)
+    """
+    pass
+```
+
+✅✅ Test: Use your function to calculate the interquartile of the small data list. Is it the same as your hand calculations?
+
+```{python}
+calculate_IQR(odd_data)
+```
+
+```{python}
+calculate_IQR(even_data)
+```
+
+## B. Percentiles
+
+<!-- #region -->
+👀 **So now we've got the first quartile, the second quartile (or median), and the third quartile. That's the 25%, the 50% and the 75% percentile. But what about the other 97 percentiles?**
+
+
+<img src= "http://my.ilstu.edu/~gjin/hsc204-eh/Module-5-Summary-Measure-2/Figure-3-8.png">
+
+
+**Q: What's a percentile?** 
+
+**A: It's a statistic to help you understand how you rank compared to everyone else. For example, if you are at the 80th percentile for height, that means you rank higher than 80% of people.**
+
+<img src="https://www.mathsisfun.com/data/images/percentile-80.svg">
+<!-- #endregion -->
+
+**We could create a function ourselves to calculate the percentile...**
+
+**But let's check out the numpy library's percentile.** 
+
+
+#### Check out this link: https://stackoverflow.com/questions/2374640/how-do-i-calculate-percentiles-with-python-numpy
+
+
+💻 Use this function to calculate what the 90th percentile would be for the small odd data list:
+
+```{python}
+
+```
+
+💻 What about the 10th percentile?
+
+```{python}
+
+```
+
+# 4. Generate Some Graphs
+
+
+This is a visual way to check your summary statistics work. 
+
+
+
+## Bar Graph
+
+
+💻 Use the reference guide to generate a bar graph of your sleep in the past seven days. 
+
+```{python}
+
+```
+
+## Histogram
+
+
+💻 Change num_bins and see what happens.
+
+```{python}
+num_bins = 6
+plt.hist(odd_data, num_bins)
+plt.xlabel('Hours of Sleep')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+### Box and Whisker
+
+
+💻 It's our old pal, box and whisker plot! Now we'll generate the plot with just one line. Use the reference guide to generate a bar graph of your sleep in the past seven days. 
+
+```{python}
+
+```
+
+# 4. Explore some bigger data sets.
+
+
+<img src = "https://pics.me.me/big-data-h-history-com-quickmeme-com-big-data-quickmeme-51205637.png">
+
+
+**With new computational tools, we can collect and analyze much bigger datasets. Maybe you've heard of "big data". Usually those data sets may have up to a million data points.**
+
+# A million!
+
+**Our social media dataset has 358 data points, which isn't quite big data, but it's definitely not small either.**
+**Use the tools you just coded up to answer some questions.**
+
+
+## A. Who answered our survey?
+
+```{python}
+df_grade = df["grade"].dropna()
+grades_list = [x for x in df_grade.values]
+grades_list = sorted(grades_list)
+```
+
+**💻 Use the list grades_list, which contains the grade of each survey respondent, to answer the following questions.**
+
+* What grade is the median student who took our survey in? 
+* What grade is the average student who took our survey in? 
+* Which grade took our survey the most?
+* Create a bar graph of the grades.
+* Which group took our survey more: the 6-9th graders or the 10 - 12th graders? (hint: use a histogram)
+
+
+## B. How long do ISF students spend on social media everyday?
+
+```{python}
+df_time = df["sm_time"].dropna() # removing rows with no response (NaN)
+times_list = [x for x in df_time.values]  # copying data from dataframe to list
+times_list = sorted(times_list)
+```
+
+**💻 Use the list times_list, which contains the number of hours each survey respondent uses social media per day.**
+
+* What is the median number of hours survey respondents use social media per day? 
+* What is the average number of hours survey respondents use social media per day? 
+* What is the most common response for the number of hours survey respondents use social media?
+* Create a box-and-whisker plot (x-axis: number of hours, y-axis: number of survey respondents).
+* Which group took our survey more: the 6-9th graders or the 10 - 12th graders? (hint: use a histogram)
+
+
+## C. Ask your own question: ______________
+
+```{python}
+df_time = df["COLUMN NAME -- REPLACE ME!!!!"].dropna() # removing rows with no response (NaN)
+new_list = [x for x in df_time.values]  # copying data from dataframe to list
+new_list = sorted(new_list)
+```
+
+**💻 Use the list new_list, which contains _____________________.**
+
+Write some questions you want to answer here using summary statistics:
+
+* 
+* 
+* 
+* 
+* 
+
+```{python}
+
+```
