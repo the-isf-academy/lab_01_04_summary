@@ -46,12 +46,12 @@ Here's are two small lists that you can run as tests when you develop your code.
 💻 **For the odd data set, put in 7 elements. Each number is the amount of sleep per night you got in the past week.**
 
 ```{python}
-odd_data = []
+sleep_data = []
 even_data = [100,200,300,400,500]
 ```
 
 ```{python}
-odd_data = sorted(odd_data)
+odd_data = sorted(sleep_data)
 even_data = sorted(even_data)
 ```
 
@@ -162,7 +162,7 @@ calculate_mode(even_data)
 
 **For example, consider the red dataset and the blue dataset. They have the same middle (both mean and median = 7), but one has much higher spread than the other.** 
 
-**Which dataset if your sleep schedule more like? What kind of spread do you have?**
+**Which dataset is your sleep schedule more like? What kind of spread do you have?**
 
 
 <img src="https://i.imgur.com/hw9yRAK.png" style="width:500px">
@@ -248,7 +248,7 @@ This is a visual way to check your summary statistics work.
 ## Bar Graph
 
 
-💻 Use the reference guide to generate a bar graph of your sleep in the past seven days. 
+💻 Use the reference guide to generate a bar graph of your sleep in the past seven days. **Note: you will probably want to use your unsorted rather than sorted sleep data for this plot.**
 
 ```{python}
 
@@ -293,6 +293,7 @@ plt.show()
 ## A. Who answered our survey?
 
 ```{python}
+df = pd.read_csv('social_media_use_clean.csv')
 df_grade = df["grade"].dropna()
 grades_list = [x for x in df_grade.values]
 grades_list = sorted(grades_list)
@@ -300,12 +301,14 @@ grades_list = sorted(grades_list)
 
 **💻 Use the list grades_list, which contains the grade of each survey respondent, to answer the following questions.**
 
-* What grade is the median student who took our survey in? 
-* What grade is the average student who took our survey in? 
+* What grade is the median student who took our survey in? What grade is the average student who took our survey in? 
 * Which grade took our survey the most?
 * Create a bar graph of the grades.
-* Which group took our survey more: the 6-9th graders or the 10 - 12th graders? (hint: use a histogram)
+* Which group took our survey more: the 6-8th graders or the 9-12th graders? (hint: use a histogram)
 
+```{python}
+
+```
 
 ## B. How long do ISF students spend on social media everyday?
 
@@ -317,11 +320,14 @@ times_list = sorted(times_list)
 
 **💻 Use the list times_list, which contains the number of hours each survey respondent uses social media per day.**
 
-* What is the median number of hours survey respondents use social media per day? 
-* What is the average number of hours survey respondents use social media per day? 
+* What is the median number of hours survey respondents use social media per day? What is the average number of hours survey respondents use social media per day? 
 * What is the most common response for the number of hours survey respondents use social media?
-* Create a box-and-whisker plot (x-axis: number of hours, y-axis: number of survey respondents).
+* How long does someone in the 90th percentile spend on social media? In the 10th percentile?
 * Do more survey respondents spend less than 3 hours, 3 - 5 hours, or 5+ hours? 
+
+```{python}
+
+```
 
 ## C. Ask your own question: ______________
 
