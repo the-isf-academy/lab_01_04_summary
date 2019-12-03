@@ -276,7 +276,7 @@ plt.show()
 
 ```
 
-# 4. Explore some bigger data sets.
+# 5. Explore some bigger data sets.
 
 
 <img src = "https://pics.me.me/big-data-h-history-com-quickmeme-com-big-data-quickmeme-51205637.png">
