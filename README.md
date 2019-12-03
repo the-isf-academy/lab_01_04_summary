@@ -14,3 +14,16 @@ As a reminder, the workflow for using Jupyter notebooks with git is as follows:
 - Save `cmd+S` the file
 - Close and halt the .Rmb file
 - Open the .ipynb file and edit as usual (this will save the output as usual while automatically updating the .Rmb file)
+
+## Installing matplotlib
+On Mac: 
+
+`python -m pip install -U matplotlib`
+
+On Windows:
+
+`pip3 install --user matplotlib`
+
+OR, if that doesn't work:
+
+`python3-pip install --user matplotlib`
